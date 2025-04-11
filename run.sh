@@ -1,0 +1,1 @@
+python train_torch.py --env PongNoFrameskip-v4 --num_timesteps 15000000 --seed 0 
