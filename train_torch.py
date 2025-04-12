@@ -32,8 +32,8 @@ def train(env_id, num_timesteps, seed, log_dir=None, checkpoint_path=None):
     set_seed(seed)
     
     # Create environment
-    env = make_atari(env_id)
-    env = wrap_deepmind(env, frame_stack=True)
+    env = make_atari(env_id,)
+    env = wrap_deepmind(env, episode_life=False, frame_stack=True)
     obs, _ = env.reset(seed=seed)  # Use new reset API
     print(f"Environment {env_id} created with observation space: {env.observation_space}, action space: {env.action_space}")
 
